@@ -1,0 +1,111 @@
+.wrapper {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.select {
+  background: var(--input-bg);
+  border: 1px solid var(--border-hover);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  padding: 6px 10px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.select:focus { border-color: var(--accent); }
+
+.input {
+  background: var(--input-bg);
+  border: 1px solid var(--border-hover);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  padding: 6px 10px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.inputSmall {
+  composes: input;
+  width: 55px;
+}
+
+.input:focus, .inputSmall:focus { border-color: var(--accent); }
+.input::placeholder, .inputSmall::placeholder { color: var(--text-muted); }
+
+.toggle {
+  background: transparent;
+  border: 1px solid var(--border-hover);
+  border-radius: 8px;
+  color: var(--text-dim);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.12s;
+  white-space: nowrap;
+}
+
+.toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.toggleActive {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 6px 8px;
+  margin-left: auto;
+  transition: color 0.15s;
+}
+
+.clearBtn:hover { color: var(--red); }
+
+.spacer {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  margin: 0 2px;
+}

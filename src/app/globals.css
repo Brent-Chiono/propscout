@@ -1,0 +1,122 @@
+/* ===== Theme Variables — Dream Home Style ===== */
+:root,
+[data-theme="dark"] {
+  --bg: #0f1117;
+  --bg-secondary: #171b26;
+  --card-bg: #171b26;
+  --surface2: #1e2333;
+  --text: #e8eaf0;
+  --text-dim: #8b92a8;
+  --text-muted: #555d78;
+  --border: #2a2f42;
+  --border-hover: #353c55;
+  --input-bg: #0f1117;
+  --accent: #e8a838;
+  --accent2: #f0c060;
+  --accent-bg: rgba(232, 168, 56, 0.12);
+  --accent-border: rgba(232, 168, 56, 0.35);
+  --header-gradient-from: #171b26;
+  --header-gradient-to: #0f1117;
+  --row-hover: rgba(255, 255, 255, 0.03);
+  --highlight-bg: rgba(232, 168, 56, 0.08);
+  --shadow: rgba(0, 0, 0, 0.5);
+  --green: #4ade80;
+  --red: #f87171;
+  --blue: #60a5fa;
+  --purple: #a78bfa;
+  --danger: #f87171;
+}
+
+[data-theme="light"] {
+  --bg: #f4f5f7;
+  --bg-secondary: #ffffff;
+  --card-bg: #ffffff;
+  --surface2: #eef0f4;
+  --text: #1a1d26;
+  --text-dim: #4a5068;
+  --text-muted: #8890a8;
+  --border: #dde0e8;
+  --border-hover: #c8ccda;
+  --input-bg: #f4f5f7;
+  --accent: #c8860a;
+  --accent2: #e09b1a;
+  --accent-bg: rgba(200, 134, 10, 0.08);
+  --accent-border: rgba(200, 134, 10, 0.3);
+  --header-gradient-from: #ffffff;
+  --header-gradient-to: #f4f5f7;
+  --row-hover: rgba(0, 0, 0, 0.02);
+  --highlight-bg: rgba(200, 134, 10, 0.06);
+  --shadow: rgba(0, 0, 0, 0.08);
+  --green: #16a34a;
+  --red: #dc2626;
+  --blue: #2563eb;
+  --purple: #7c3aed;
+  --danger: #dc2626;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* Google Maps info window reset */
+.gm-style .gm-style-iw-c {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  padding: 0 !important;
+  box-shadow: 0 20px 60px var(--shadow) !important;
+}
+
+.gm-style .gm-style-iw-d {
+  overflow: hidden !important;
+  padding: 16px !important;
+}
+
+.gm-style .gm-style-iw-tc::after {
+  background: var(--card-bg) !important;
+}
+
+.gm-style .gm-ui-hover-effect > span {
+  background-color: var(--text-muted) !important;
+}
+
+.iw-root {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  font-size: 13px;
+  max-width: 300px;
+}
