@@ -16,11 +16,26 @@ const POLK_COUNTY_CENTER = { lat: 41.64, lng: -93.6242 };
 
 const DARK_STYLES: google.maps.MapTypeStyle[] = [
   { featureType: 'poi', stylers: [{ visibility: 'off' }] },
+  { featureType: 'landscape', stylers: [{ color: '#16213e' }] },
   { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#1a1a2e' }] },
   { featureType: 'water', stylers: [{ color: '#0f3460' }] },
-  { elementType: 'labels.text.fill', stylers: [{ color: '#a0aec0' }] },
-  { featureType: 'landscape', stylers: [{ color: '#16213e' }] },
-  { featureType: 'road', elementType: 'labels.text.fill', stylers: [{ color: '#8a8a9a' }] },
+
+  // Kill the white halo on every label, then set a readable light fill
+  { elementType: 'labels.text.stroke', stylers: [{ visibility: 'off' }] },
+  { elementType: 'labels.text.fill', stylers: [{ color: '#cbd5e0' }] },
+
+  { featureType: 'administrative', elementType: 'labels.text.stroke', stylers: [{ visibility: 'off' }] },
+  { featureType: 'administrative', elementType: 'labels.text.fill', stylers: [{ color: '#e2e8f0' }] },
+  { featureType: 'administrative.locality', elementType: 'labels.text.stroke', stylers: [{ visibility: 'off' }] },
+  { featureType: 'administrative.locality', elementType: 'labels.text.fill', stylers: [{ color: '#f7fafc' }] },
+  { featureType: 'administrative.neighborhood', elementType: 'labels.text.stroke', stylers: [{ visibility: 'off' }] },
+  { featureType: 'administrative.neighborhood', elementType: 'labels.text.fill', stylers: [{ color: '#cbd5e0' }] },
+
+  { featureType: 'road', elementType: 'labels.text.stroke', stylers: [{ visibility: 'off' }] },
+  { featureType: 'road', elementType: 'labels.text.fill', stylers: [{ color: '#a0aec0' }] },
+
+  { featureType: 'water', elementType: 'labels.text.stroke', stylers: [{ visibility: 'off' }] },
+  { featureType: 'water', elementType: 'labels.text.fill', stylers: [{ color: '#7fb3d5' }] },
 ];
 
 const LIGHT_STYLES: google.maps.MapTypeStyle[] = [
